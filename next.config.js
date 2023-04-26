@@ -36,12 +36,12 @@ const nextConfig = {
     };
     config.plugins.push(
       new NextFederationPlugin({
-        name: "tempRegisterPage",
+        name: "CheckoutPage",
         remotes: {},
 
         filename: "static/chunks/remoteEntry.js",
         exposes: {
-          "./tempRegister": "./PagesComponents/TempRegister/TempRegister.jsx",
+          "./checkout": "./PagesComponents/Checkout/Checkout.jsx",
         },
 
         extraOptions: {

@@ -1,5 +1,5 @@
-import TempRegister from "../PagesComponents/TempRegister";
+import Checkout from "../PagesComponents/Checkout";
 
-export default function TempRegisterPage() {
-  return <TempRegister />;
+export default function CheckoutPage() {
+  return <Checkout />;
 }
