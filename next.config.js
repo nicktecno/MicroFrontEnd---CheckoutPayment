@@ -37,7 +37,20 @@ const nextConfig = {
     config.plugins.push(
       new NextFederationPlugin({
         name: "CheckoutPage",
-        remotes: {},
+        remotes: {
+          loginPage: `loginPage@https://micro-front-login.vercel.app/_next/static/${
+            isServer ? "ssr" : "chunks"
+          }/remoteEntry.js`,
+          CartPage: `CartPage@https://micro-front-end-cart.vercel.app//_next/static/${
+            isServer ? "ssr" : "chunks"
+          }/remoteEntry.js`,
+          homePage: `homePage@https://micro-front-home.vercel.app/_next/static/${
+            isServer ? "ssr" : "chunks"
+          }/remoteEntry.js`,
+          productPage: `productPage@https://micro-front-end-product.vercel.app//_next/static/${
+            isServer ? "ssr" : "chunks"
+          }/remoteEntry.js`,
+        },
 
         filename: "static/chunks/remoteEntry.js",
         exposes: {

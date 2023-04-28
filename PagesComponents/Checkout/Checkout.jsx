@@ -134,7 +134,7 @@ const Payment = ({ api, setCartLength, routeTranslations }) => {
     reduce.forEach(
       (produto, index) =>
         window?.dataLayer &&
-        window?.dataLayer.push({
+        window?.dataLayer?.push({
           event: "orderPlaced",
           ecommerce: {
             purchase: {
@@ -162,7 +162,7 @@ const Payment = ({ api, setCartLength, routeTranslations }) => {
     }
   };
   function checkoutOption(metodo) {
-    window.dataLayer.push({
+    window?.dataLayer?.push({
       event: "checkoutOption",
       ecommerce: {
         checkout_option: {
@@ -222,7 +222,7 @@ const Payment = ({ api, setCartLength, routeTranslations }) => {
             };
           });
 
-          window.dataLayer.push({
+          window?.dataLayer?.push({
             event: "checkout",
             ecommerce: {
               checkout: {
@@ -262,7 +262,7 @@ const Payment = ({ api, setCartLength, routeTranslations }) => {
         setMyCards(responseMyCards.data);
       } catch {
         notification("Erro ao processar o carrinho", "error");
-        history.push("/cart");
+        // history.push("/cart");
       } finally {
         setLoading(false);
       }

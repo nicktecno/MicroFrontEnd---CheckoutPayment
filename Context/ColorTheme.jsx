@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
-import { defaultLayout } from "../jover.json";
+import defaultLayout from "../jover";
 export const ColorThemeContext = createContext();
 
 export const ColorThemeProvider = ({ children }) => {
